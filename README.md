@@ -1,65 +1,61 @@
 # Q.A Challenge Luma Store
 
-Este é um desafio para que possamos ver as suas habilidades como QA/Tester.
+## Descrição
 
-Nesse desafio você deverá testar de forma automatizada o site Luma Store. O projeto a ser desenvolvido por você tem como objetivo exibir executar ações na loja conforme indicado nos casos de uso que estão logo abaixo.
+Este projeto utiliza Cypress para testar a funcionalidade do site Luma Store, garantindo que os os casos de uso solicitados funcionem corretamente.
 
-[SPOILER] As instruções de entrega e apresentação do challenge estão no final deste Readme (=
+## Tecnologias Utilizadas
 
-### Antes de começar
- 
-- Considere como prazo limite da avaliação o período a partir do início do teste. Se, por algum motivo, não for possível concluir dentro deste prazo, avise a pessoa que o convidou para receber instruções sobre o que fazer.
-- Documente todo o processo de investigação para o desenvolvimento da atividade (README.md no seu repositório); os resultados destas tarefas são tão importantes quanto o seu processo de pensamento e decisões à medida que as completa, por isso, tente documentar e apresentar as suas hipóteses e decisões na medida do possível.
+- **Linguagem:** JavaScript
+- **Framework de Teste:** Cypress
 
+## Instalação e Uso
 
-#### Tecnologias:
-- Ferramenta: Ghost Inspector, Selenium, Cypress, Robot Framework, ou outro de seu conhecimento
-- Adicionais: Cucumber ou outros plugins necessários para configurar a ferramenta
+### Passo a Passo de Instalação
 
-## Teste
+# 1. Clonar o repositório
 
-Neste desafio aplicaremos os conceitos de teste caixa preta, onde testaremos a página https://magento.softwaretestingboard.com
+git clone https://github.com/philippeffs/coodesh.git
 
-> Nota: utilize dados fictícios criados através do site https://randomuser.me
+# 2. Navegar até o diretório do projeto
 
-**Obrigatório 1** - Para realizar o teste precisamos escolher a ferramenta de teste. Explicar o por quê da escolha, as vantagens e desvantagens dos que não foram escolhidos.
+cd coodesh
 
-**Obrigatório 2** - Você deverá atender aos seguintes casos de uso:
+# 3. Instalar dependências
 
-- Se a página está carregando corretamente a home page;
-- Buscar por `shirt` no menu superior e revisar se a página de resultados carregou corretamente. Veja o diferencial 1 para incrementar este caso de uso;
-- Adicionar um produto no carrinho
-- Realizar checkout
+npm install
 
-### Diferenciais
-Além do que foi solicitado, existem itens adicionais para incrementar o projeto final. Você também pode adicionar algum recurso não citado anteriormente.
+Antes, certifique-se de que você tem o Node.js instalado em sua máquina. Você pode baixá-lo através deste link: https://nodejs.org/pt
 
-- **Diferencial 1** - Buscar por `shirt` no menu superior e clicar no último resultado sugerido. Se possível, escute o retorno da requisição para saber o momento de clicar na interface;
-- **Diferencial 2** - Criar uma conta na tela de Login/Cadastro. Observe que existe um captcha no formulário, então é necessário decidir como abordar este campo;
-- **Diferencial 3** - Adicionar um produto **aleatório** do catalogo de moda masculina no carrinho;
-- **Diferencial 4** - Adicionar comentário em um produto **aleatório** do catálogo de moda masculina no carrinho;
-- **Diferencial 5** - Gerar um relatório automático do teste.
+# Executar os testes
 
-## Readme do Repositório
+Para abrir o Cypress Test Runner:
 
-- Deve conter o título do projeto
-- Uma descrição sobre o projeto em frase
-- Deve conter uma lista com linguagem, framework e/ou tecnologias usadas
-- Como instalar e usar o projeto (instruções)
-- Não esqueça o [.gitignore](https://www.toptal.com/developers/gitignore)
-- Se está usando github pessoal, referencie que é um challenge by coodesh:  
+npx cypress open
 
->  This is a challenge by [Coodesh](https://coodesh.com/)
+Para executar os testes em modo headless (sem interface gráfica): npx cypress run
 
-## Finalização e Instruções para a Apresentação
+Por que o Cypress?
 
-1. Adicione o link do repositório com a sua solução no teste
-2. Verifique se o Readme está bom e faça o commit final em seu repositório;
-3. Envie e aguarde as instruções para seguir. Sucesso e boa sorte. =)
+    •	É o framework que tenho mais facilidade e experiência.
+    •	Executa testes diretamente no navegador.
+    •	Possui uma rica documentação e comunidade ativa.
 
-## Suporte
+# Caso de Uso Testado
 
-Use a [nossa comunidade](https://discord.gg/rdXbEvjsWu) para tirar dúvidas sobre o processo ou envie uma mensagem diretamente a um especialista no chat da plataforma. 
+O teste automatizado implementa o acesso à Home Page e em seguida um fluxo de compra na aplicação Luma Store, que inclui várias etapas distintas:
 
+# Etapas
 
-Use a [nossa comunidade](https://discord.gg/rdXbEvjsWu) para tirar dúvidas sobre o processo ou envie uma mensagem diretamente a um especialista no chat da plataforma. 
+1. Verificar se a página inicial carrega corretamente
+   - Acessa a página inicial da Luma Store e verifica se o título da página contém "Home Page".
+2. Buscar por "shirt" e verificar a página de resultados
+   - Realiza uma busca por "shirt" e verifica se a página de resultados carrega corretamente.
+3. Adicionar um produto ao carrinho
+   - Seleciona o primeiro produto da lista de resultados da busca, escolhe o tamanho e a cor, e adiciona o produto ao carrinho.
+   - Verifica se a mensagem de sucesso aparece.
+4. Realizar o checkout
+   - Acessa o carrinho de compras e prossegue para a página de checkout.
+   - Verifica se os elementos da página de checkout estão visíveis.
+
+This is a challenge by Coodesh.
