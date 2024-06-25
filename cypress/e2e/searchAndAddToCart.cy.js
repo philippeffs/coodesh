@@ -1,42 +1,4 @@
 /* eslint-disable no-undef */
-// desafio.spec.js
-
-/*
-describe("Desafio Luma Store", () => {
-  // Caso de uso 1: Verificar se a página inicial carrega corretamente
-  it("Deve carregar a página inicial corretamente", () => {
-    cy.visit("https://magento.softwaretestingboard.com");
-    cy.get("title").should("contain", "Home Page");
-  });
-
-  // Caso de uso 2: Buscar por "shirt" e verificar a página de resultados
-  it('Deve buscar por "shirt" e carregar a página de resultados', () => {
-    cy.get('input[name="q"]', { timeout: 20000 })
-      .should("be.visible")
-      .type("shirt{enter}");
-    cy.url().should("include", "catalogsearch/result");
-    cy.get(".products-grid").should("be.visible");
-  });
-
-  // Caso de uso 3: Adicionar um produto ao carrinho
-  it("Deve adicionar um produto ao carrinho", () => {
-    cy.get(".product-image-photo", { timeout: 20000 })
-      .first()
-      .should("be.visible")
-      .click();
-    cy.get("button span").contains("Add to Cart").click();
-    cy.get(".message-success").should("contain", "You added");
-  });
-
-  // Caso de uso 4: Realizar o checkout
-  it("Deve realizar o checkout", () => {
-    cy.get(".action.showcart", { timeout: 20000 }).should("be.visible").click();
-    cy.get('a[title="Proceed to Checkout"]').click();
-    cy.url().should("include", "checkout");
-    // Complete o formulário de checkout conforme necessário usando cy.get().type() etc.
-  });
-});
-*/
 
 describe("Desafio Luma Store", () => {
   // Verificar se a página inicial carrega corretamente, buscar por "shirt", adicionar um item ao carrinho e fazer checkout
