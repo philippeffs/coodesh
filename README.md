@@ -58,4 +58,4 @@ O teste automatizado implementa o acesso à Home Page e em seguida um fluxo de c
    - Acessa o carrinho de compras e prossegue para a página de checkout.
    - Verifica se os elementos da página de checkout estão visíveis.
 
-This is a challenge by Coodesh.
+>  This is a challenge by [Coodesh](https://coodesh.com/)
